@@ -1,46 +1,58 @@
-# Laporan Praktikum Minggu 1 (sesuaikan minggu ke berapa?)
-Topik: [Tuliskan judul topik, misalnya "Class dan Object"]
+# Laporan Praktikum Minggu 3
+Topik:Inheritance (Kategori Produk)
 
 ## Identitas
-- Nama  : [Nama Mahasiswa]
-- NIM   : [NIM Mahasiswa]
-- Kelas : [Kelas]
+- Nama  : irwandi isnugroho
+- NIM   : 240202867
+- Kelas : 3IKKA
 
 ---
 
 ## Tujuan
-(Tuliskan tujuan praktikum minggu ini.  
-Contoh: *Mahasiswa memahami konsep class dan object serta dapat membuat class Produk dengan enkapsulasi.*)
+Mahasiswa mampu menjelaskan konsep inheritance (pewarisan class) dalam OOP.
+Mahasiswa mampu membuat superclass dan subclass untuk produk pertanian.
+Mahasiswa mampu mendemonstrasikan hierarki class melalui contoh kode.
+Mahasiswa mampu menggunakan super untuk memanggil konstruktor dan method parent class.
+Mahasiswa mampu membuat laporan praktikum yang menjelaskan perbedaan penggunaan inheritance dibanding class tunggal.
 
 ---
 
 ## Dasar Teori
 (Tuliskan ringkasan teori singkat (3–5 poin) yang mendasari praktikum.  
 Contoh:  
-1. Class adalah blueprint dari objek.  
-2. Object adalah instansiasi dari class.  
-3. Enkapsulasi digunakan untuk menyembunyikan data.)
+1.Superclass: class induk yang mendefinisikan atribut umum.
+2.Subclass: class turunan yang mewarisi atribut/method superclass, dan dapat menambahkan atribut/method baru.
+3.super digunakan untuk memanggil konstruktor atau method superclass.
 
 ---
 
 ## Langkah Praktikum
-(Tuliskan Langkah-langkah dalam prakrikum, contoh:
-1. Langkah-langkah yang dilakukan (setup, coding, run).  
-2. File/kode yang dibuat.  
-3. Commit message yang digunakan.)
+1. Membuat Superclass Produk
+Gunakan class Produk dari Bab 2 sebagai superclass.
 
----
+2.Membuat Subclass
+Benih.java → atribut tambahan: varietas.
+Pupuk.java → atribut tambahan: jenis pupuk (Urea, NPK, dll).
+AlatPertanian.java → atribut tambahan: material (baja, kayu, plastik).
+
+3.Membuat Main Class
+Instansiasi minimal satu objek dari tiap subclass.
+Tampilkan data produk dengan memanfaatkan inheritance.
+
+4.Menambahkan CreditBy
+Panggil class CreditBy untuk menampilkan identitas mahasiswa.
+
+5.Commit dan Push
+Commit dengan pesan: week3-inheritance.
 
 ## Kode Program
-(Tuliskan kode utama yang dibuat, contoh:  
+Benih: Benih Padi IR64 Varietas: IR64
+Pupuk: Pupuk Urea Jenis: Urea
+Alat Pertanian: Cangkul Baja Material: Baja
 
-```java
-// Contoh
-Produk p1 = new Produk("BNH-001", "Benih Padi", 25000, 100);
-System.out.println(p1.getNama());
-```
-)
----
+credit by: <240202867> - <irwandi isnugroho>
+
+Process finished with exit code 0
 
 ## Hasil Eksekusi
 (Sertakan screenshot hasil eksekusi program.  
@@ -63,11 +75,11 @@ Contoh: *Dengan menggunakan class dan object, program menjadi lebih terstruktur 
 ---
 
 ## Quiz
-(1. [Tuliskan kembali pertanyaan 1 dari panduan]  
-   **Jawaban:** …  
+1 Apa keuntungan menggunakan inheritance dibanding membuat class terpisah tanpa hubungan?
+   Inheritance (pewarisan) adalah salah satu pilar utama Object-Oriented Programming (OOP), dan tujuannya adalah memanfaatkan kembali kode (code reuse) serta menjaga struktur yang terorganisir dan konsisten antar kelas.  
 
-2. [Tuliskan kembali pertanyaan 2 dari panduan]  
-   **Jawaban:** …  
+2.Bagaimana cara subclass memanggil konstruktor superclass?
+   Dalam Python (dan bahasa OOP lain juga mirip konsepnya), subclass dapat memanggil konstruktor superclass menggunakan fungsi bawaan super().
 
-3. [Tuliskan kembali pertanyaan 3 dari panduan]  
-   **Jawaban:** …  )
+3.Berikan contoh kasus di POS pertanian selain Benih, Pupuk, dan Alat Pertanian yang bisa dijadikan subclass.  
+   hasil panen,palan ternak,pestisida,media tanam bibit buah
