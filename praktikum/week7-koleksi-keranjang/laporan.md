@@ -1,33 +1,33 @@
-# Laporan Praktikum Minggu 1 (sesuaikan minggu ke berapa?)
-Topik: [Tuliskan judul topik, misalnya "Class dan Object"]
+# Laporan Praktikum Minggu 7
+Topik: Collections dan Implementasi Keranjang Belanja
 
 ## Identitas
-- Nama  : [Nama Mahasiswa]
-- NIM   : [NIM Mahasiswa]
-- Kelas : [Kelas]
+- Nama  : irwandi isnugroho
+- NIM   : 240202867
+- Kelas : [3IKKA
 
 ---
 
 ## Tujuan
-(Tuliskan tujuan praktikum minggu ini.  
-Contoh: *Mahasiswa memahami konsep class dan object serta dapat membuat class Produk dengan enkapsulasi.*)
+Menjelaskan konsep collection dalam Java (List, Map, Set).
+Menggunakan ArrayList untuk menyimpan dan mengelola objek.
+Mengimplementasikan Map atau Set sesuai kebutuhan pengelolaan data.
+Melakukan operasi dasar pada collection: tambah, hapus, dan hitung total.
+Menganalisis efisiensi penggunaan collection dalam konteks sistem Agri-POS.
 
 ---
 
 ## Dasar Teori
-(Tuliskan ringkasan teori singkat (3–5 poin) yang mendasari praktikum.  
-Contoh:  
-1. Class adalah blueprint dari objek.  
-2. Object adalah instansiasi dari class.  
-3. Enkapsulasi digunakan untuk menyembunyikan data.)
 
----
+---List (implementasi: ArrayList) — Terurut, dapat menyimpan elemen duplikat.
+Map (implementasi: HashMap) — Menyimpan pasangan key–value, akses cepat berdasarkan key.
+Set (implementasi: HashSet) — Tidak menerima duplikat dan tidak mempertahankan urutan.
 
 ## Langkah Praktikum
-(Tuliskan Langkah-langkah dalam prakrikum, contoh:
-1. Langkah-langkah yang dilakukan (setup, coding, run).  
-2. File/kode yang dibuat.  
-3. Commit message yang digunakan.)
+ Membuat Class Product
+ Implementasi Keranjang dengan ArrayList
+ Main Program 
+ Implementasi Alternatif Menggunakan Map (Dengan Quantity)
 
 ---
 
@@ -63,11 +63,19 @@ Contoh: *Dengan menggunakan class dan object, program menjadi lebih terstruktur 
 ---
 
 ## Quiz
-(1. [Tuliskan kembali pertanyaan 1 dari panduan]  
+(1.Jelaskan perbedaan mendasar antara List, Map, dan Set.
    **Jawaban:** …  
+List: Koleksi elemen berurutan, punya index, dan boleh duplikat.
 
-2. [Tuliskan kembali pertanyaan 2 dari panduan]  
-   **Jawaban:** …  
+Set: Koleksi elemen unik, tanpa index, dan tidak boleh duplikat.
 
-3. [Tuliskan kembali pertanyaan 3 dari panduan]  
-   **Jawaban:** …  )
+Map: Struktur key–value, key unik, value boleh sama.
+
+2.Mengapa ArrayList cocok digunakan untuk keranjang belanja sederhana?
+  ArrayList cocok untuk keranjang belanja sederhana karena menyimpan data berurutan, boleh duplikat (produk sama bisa dibeli lebih dari satu), dan mudah diakses serta ditambah/dihapus. 
+
+3.Bagaimana struktur Set mencegah duplikasi data? 
+   Set mencegah duplikasi data dengan mengecek kesamaan elemen (menggunakan equals() dan hashCode()) sehingga elemen yang sama tidak ditambahkan dua kali.
+4.Kapan sebaiknya menggunakan Map dibandingkan List? Jelaskan dengan contoh.
+Map digunakan dibandingkan List saat data perlu diakses berdasarkan key unik, bukan urutan.
+Contoh: menyimpan kode produk → nama produk, misalnya {"P001" → "Beras"}, lebih tepat memakai Map daripada List.
