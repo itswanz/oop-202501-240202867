@@ -1,34 +1,35 @@
-# Laporan Praktikum Minggu 1 (sesuaikan minggu ke berapa?)
-Topik: [Tuliskan judul topik, misalnya "Class dan Object"]
+# Laporan Praktikum Minggu 9
+Topik: Exception Handling, Custom Exception, dan Penerapan Design Pattern
 
 ## Identitas
-- Nama  : [Nama Mahasiswa]
-- NIM   : [NIM Mahasiswa]
-- Kelas : [Kelas]
+- Nama  : Irwandi isnugroho
+- NIM   : 240202867
+- Kelas : 3IKKA
 
 ---
 
 ## Tujuan
-(Tuliskan tujuan praktikum minggu ini.  
-Contoh: *Mahasiswa memahami konsep class dan object serta dapat membuat class Produk dengan enkapsulasi.*)
+Menjelaskan perbedaan antara error dan exception.
+Mengimplementasikan try–catch–finally dengan tepat.
+Membuat custom exception sesuai kebutuhan program.
+Mengintegrasikan exception handling ke dalam aplikasi sederhana (kasus keranjang belanja).
+(Opsional) Menerapkan design pattern sederhana (Singleton/MVC) dan unit testing dasar.
 
 ---
 
 ## Dasar Teori
-(Tuliskan ringkasan teori singkat (3–5 poin) yang mendasari praktikum.  
-Contoh:  
-1. Class adalah blueprint dari objek.  
-2. Object adalah instansiasi dari class.  
-3. Enkapsulasi digunakan untuk menyembunyikan data.)
-
+. Error vs Exception
+Error → kondisi fatal, tidak dapat ditangani (contoh: OutOfMemoryError).
+Exception → kondisi tidak normal yang dapat ditangani oleh program.
+ Struktur try–catch–finally
+ Membuat Custom Exception
 ---
 
 ## Langkah Praktikum
-(Tuliskan Langkah-langkah dalam prakrikum, contoh:
-1. Langkah-langkah yang dilakukan (setup, coding, run).  
-2. File/kode yang dibuat.  
-3. Commit message yang digunakan.)
-
+ Membuat Custom Exception
+ Model Product dengan Stok
+ Implementasi ShoppingCart dengan Exception Handling
+  Main Program untuk Menguji Exception Handling
 ---
 
 ## Kode Program
@@ -63,11 +64,16 @@ Contoh: *Dengan menggunakan class dan object, program menjadi lebih terstruktur 
 ---
 
 ## Quiz
-(1. [Tuliskan kembali pertanyaan 1 dari panduan]  
+(1.Jelaskan perbedaan error dan exception.
    **Jawaban:** …  
+   Error: Masalah serius dari sistem/JVM yang tidak bisa atau jarang ditangani program (misalnya OutOfMemoryError).
 
-2. [Tuliskan kembali pertanyaan 2 dari panduan]  
-   **Jawaban:** …  
+Exception: Kesalahan saat runtime yang masih bisa ditangani oleh program (misalnya NullPointerException).
 
-3. [Tuliskan kembali pertanyaan 3 dari panduan]  
-   **Jawaban:** …  )
+2.Apa fungsi finally dalam blok try–catch–finally?
+   **Jawaban:** …  finally digunakan untuk menjalankan kode yang pasti dieksekusi setelah try–catch, baik terjadi exception maupun tidak, biasanya untuk menutup resource seperti file atau koneksi.
+
+3. Mengapa custom exception diperlukan?
+   **Jawaban:** …  )Custom exception diperlukan agar kesalahan lebih spesifik dan mudah dipahami, serta memungkinkan penanganan error yang sesuai dengan logika aplikasi.
+4.Berikan contoh kasus bisnis dalam POS yang membutuhkan custom exception.
+pada POS, saat kasir menjual barang tetapi stok tidak mencukupi, sistem melempar custom exception seperti StokTidakCukupException agar transaksi dibatalkan dengan pesan yang jelas.
