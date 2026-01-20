@@ -2,32 +2,48 @@
 Topik: [Tuliskan judul topik, misalnya "Class dan Object"]
 
 ## Identitas
-- Nama  : [Nama Mahasiswa]
-- NIM   : [NIM Mahasiswa]
-- Kelas : [Kelas]
+- Nama  : irwandi isnugroho 
+- NIM   : 240202867
+- Kelas : IKKA
 
 ---
 
 ## Tujuan
-(Tuliskan tujuan praktikum minggu ini.  
-Contoh: *Mahasiswa memahami konsep class dan object serta dapat membuat class Produk dengan enkapsulasi.*)
+Mahasiswa mampu menjelaskan konsep polymorphism dalam OOP.
+Mahasiswa mampu membedakan method overloading dan overriding.
+Mahasiswa mampu mengimplementasikan polymorphism (overriding, overloading, dynamic binding) dalam program.
+Mahasiswa mampu menganalisis contoh kasus polymorphism pada sistem nyata (Agri-POS).
 
 ---
 
 ## Dasar Teori
-(Tuliskan ringkasan teori singkat (3–5 poin) yang mendasari praktikum.  
-Contoh:  
-1. Class adalah blueprint dari objek.  
-2. Object adalah instansiasi dari class.  
-3. Enkapsulasi digunakan untuk menyembunyikan data.)
+Overloading → mendefinisikan method dengan nama sama tetapi parameter berbeda.
+Overriding → subclass mengganti implementasi method dari superclass.
+Dynamic Binding → pemanggilan method ditentukan saat runtime, bukan compile time
 
 ---
 
 ## Langkah Praktikum
-(Tuliskan Langkah-langkah dalam prakrikum, contoh:
-1. Langkah-langkah yang dilakukan (setup, coding, run).  
-2. File/kode yang dibuat.  
-3. Commit message yang digunakan.)
+Overloading
+
+Tambahkan method tambahStok(int jumlah) dan tambahStok(double jumlah) pada class Produk.
+Overriding
+
+Tambahkan method getInfo() pada superclass Produk.
+Override method getInfo() pada subclass Benih, Pupuk, dan AlatPertanian.
+Dynamic Binding
+
+Buat array Produk[] daftarProduk yang berisi objek Benih, Pupuk, dan AlatPertanian.
+Loop array tersebut dan panggil getInfo(). Perhatikan bagaimana Java memanggil method sesuai jenis objek aktual.
+Main Class
+
+Buat MainPolymorphism.java untuk mendemonstrasikan overloading, overriding, dan dynamic binding.
+CreditBy
+
+Tetap panggil CreditBy.print("<NIM>", "<Nama>").
+Commit dan Push
+
+Commit dengan pesan: week4-polymorphism.
 
 ---
 
@@ -63,11 +79,12 @@ Contoh: *Dengan menggunakan class dan object, program menjadi lebih terstruktur 
 ---
 
 ## Quiz
-(1. [Tuliskan kembali pertanyaan 1 dari panduan]  
+(1. Apa perbedaan overloading dan overriding? 
    **Jawaban:** …  
-
-2. [Tuliskan kembali pertanyaan 2 dari panduan]  
+    Membuat beberapa method dengan nama yang sama dalam satu class, tapi parameter berbeda.
+2. Bagaimana Java menentukan method mana yang dipanggil dalam dynamic binding?  
    **Jawaban:** …  
-
-3. [Tuliskan kembali pertanyaan 3 dari panduan]  
-   **Jawaban:** …  )
+Dalam dynamic binding (late binding) di Java, method yang dipanggil ditentukan saat runtime berdasarkan objek sebenarnya, bukan tipe referensinya.
+3. Berikan contoh kasus polymorphism dalam sistem POS selain produk pertanian.
+   **Jawaban:** …  
+   Menjual berbagai jenis pembayaran dengan cara proses yang berbeda, tapi dipanggil dengan interface yang sama.
