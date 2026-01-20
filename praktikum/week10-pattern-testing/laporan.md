@@ -1,34 +1,44 @@
-# Laporan Praktikum Minggu 1 (sesuaikan minggu ke berapa?)
-Topik: [Tuliskan judul topik, misalnya "Class dan Object"]
+# Laporan Praktikum Minggu 10 (sesuaikan minggu ke berapa?)
+Topik: Design Pattern (Singleton, MVC) dan Unit Testing menggunakan JUnit
 
 ## Identitas
-- Nama  : [Nama Mahasiswa]
-- NIM   : [NIM Mahasiswa]
-- Kelas : [Kelas]
+- Nama  : irwandi isnugroho
+- NIM   : 240202867
+- Kelas : 3IKKA
 
 ---
 
 ## Tujuan
-(Tuliskan tujuan praktikum minggu ini.  
-Contoh: *Mahasiswa memahami konsep class dan object serta dapat membuat class Produk dengan enkapsulasi.*)
+Menjelaskan konsep dasar design pattern dalam rekayasa perangkat lunak.
+Mengimplementasikan Singleton Pattern dengan benar.
+Menjelaskan dan menerapkan Model–View–Controller (MVC) pada aplikasi sederhana.
+Membuat dan menjalankan unit test menggunakan JUnit.
+Menganalisis manfaat penerapan design pattern dan unit testing terhadap kualitas perangkat lunak.
 
 ---
 
 ## Dasar Teori
-(Tuliskan ringkasan teori singkat (3–5 poin) yang mendasari praktikum.  
-Contoh:  
-1. Class adalah blueprint dari objek.  
-2. Object adalah instansiasi dari class.  
-3. Enkapsulasi digunakan untuk menyembunyikan data.)
+ Design Pattern
+Design pattern adalah solusi desain yang telah teruji untuk menyelesaikan masalah umum dalam pengembangan perangkat lunak. Fokus minggu ini:
+
+Singleton Pattern
+MVC (Model–View–Controller)
+2. Singleton Pattern
+Tujuan: Menjamin suatu class hanya memiliki satu instance dan menyediakan titik akses global.
+
+Karakteristik:
+
+Constructor private
+Atribut static instance
+Method static getInstance()
 
 ---
 
 ## Langkah Praktikum
-(Tuliskan Langkah-langkah dalam prakrikum, contoh:
-1. Langkah-langkah yang dilakukan (setup, coding, run).  
-2. File/kode yang dibuat.  
-3. Commit message yang digunakan.)
-
+mplementasikan Singleton untuk DatabaseConnection.
+Buat struktur MVC sederhana untuk fitur Product.
+Buat minimal 1 unit test JUnit.
+Jalankan unit test dan dokumentasikan hasilnya
 ---
 
 ## Kode Program
@@ -63,11 +73,14 @@ Contoh: *Dengan menggunakan class dan object, program menjadi lebih terstruktur 
 ---
 
 ## Quiz
-(1. [Tuliskan kembali pertanyaan 1 dari panduan]  
-   **Jawaban:** …  
+(1. Mengapa constructor pada Singleton harus bersifat private?
+   **Jawaban:** …  Constructor pada Singleton dibuat private agar tidak bisa dibuat objek baru dari luar class, sehingga hanya satu instance yang dapat dibuat dan digunakan di seluruh aplikasi.
 
-2. [Tuliskan kembali pertanyaan 2 dari panduan]  
-   **Jawaban:** …  
+2. Jelaskan manfaat pemisahan Model, View, dan Controller.
+   **Jawaban:** …  Pemisahan Model, View, dan Controller (MVC) membuat kode lebih terstruktur, mudah dirawat, dan perubahan tampilan atau logika tidak saling memengaruhi.
 
-3. [Tuliskan kembali pertanyaan 3 dari panduan]  
-   **Jawaban:** …  )
+3. Apa peran unit testing dalam menjaga kualitas perangkat lunak?
+   **Jawaban:** …  )Unit testing berperan untuk memastikan tiap bagian kode berjalan benar, mendeteksi bug lebih awal, dan menjaga kualitas perangkat lunak saat terjadi perubahan kode.
+4.Apa risiko jika Singleton tidak diimplementasikan dengan benar?
+Jika Singleton tidak diimplementasikan dengan benar, bisa terjadi lebih dari satu instance, inkonsistensi data, dan bug sulit dilacak, terutama pada aplikasi multithreading.
+
