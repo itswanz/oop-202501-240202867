@@ -1,33 +1,55 @@
 # Laporan Praktikum Minggu 1 (sesuaikan minggu ke berapa?)
-Topik: [Tuliskan judul topik, misalnya "Class dan Object"]
+Topik:abstraction_interface
 
 ## Identitas
-- Nama  : [Nama Mahasiswa]
-- NIM   : [NIM Mahasiswa]
-- Kelas : [Kelas]
+- Nama  : irwandi isnugroho
+- NIM   : 240202867
+- Kelas : 3IKKA
 
 ---
 
 ## Tujuan
-(Tuliskan tujuan praktikum minggu ini.  
-Contoh: *Mahasiswa memahami konsep class dan object serta dapat membuat class Produk dengan enkapsulasi.*)
+Mahasiswa mampu menjelaskan perbedaan abstract class dan interface.
+Mahasiswa mampu mendesain abstract class dengan method abstrak sesuai kebutuhan kasus.
+Mahasiswa mampu membuat interface dan mengimplementasikannya pada class.
+Mahasiswa mampu menerapkan multiple inheritance melalui interface pada rancangan kelas.
+Mahasiswa mampu mendokumentasikan kode (komentar kelas/method, README singkat pada folder minggu).
 
 ---
 
 ## Dasar Teori
-(Tuliskan ringkasan teori singkat (3–5 poin) yang mendasari praktikum.  
-Contoh:  
-1. Class adalah blueprint dari objek.  
-2. Object adalah instansiasi dari class.  
-3. Enkapsulasi digunakan untuk menyembunyikan data.)
-
+Abstract class: tidak dapat diinstansiasi, dapat memiliki method abstrak (tanpa badan) dan non-abstrak. Dapat menyimpan state (field).
+Interface: kumpulan kontrak (method tanpa implementasi konkret). Sejak Java 8 mendukung default method. Mendukung multiple inheritance (class dapat mengimplementasikan banyak interface).
+Gunakan abstract class bila ada shared state dan perilaku dasar; gunakan interface untuk mendefinisikan kemampuan/kontrak lintas hierarki.
+Dalam konteks Agri-POS, Pembayaran dapat dimodelkan se
 ---
 
 ## Langkah Praktikum
-(Tuliskan Langkah-langkah dalam prakrikum, contoh:
-1. Langkah-langkah yang dilakukan (setup, coding, run).  
-2. File/kode yang dibuat.  
-3. Commit message yang digunakan.)
+Abstract Class – Pembayaran
+
+Buat Pembayaran (abstract) dengan field invoiceNo, total dan method:
+double biaya() (abstrak) → biaya tambahan (fee).
+boolean prosesPembayaran() (abstrak) → mengembalikan status berhasil/gagal.
+double totalBayar() (konkrit) → return total + biaya();.
+Subclass Konkret
+
+Cash → biaya = 0, proses = selalu berhasil jika tunai >= totalBayar().
+EWallet → biaya = 1.5% dari total; proses = membutuhkan validasi.
+Interface
+
+Validatable → boolean validasi(); (contoh: OTP).
+Receiptable → String cetakStruk();
+Multiple Inheritance via Interface
+
+EWallet mengimplementasikan dua interface: Validatable, Receiptable.
+Cash setidaknya mengimplementasikan Receiptable.
+Main Class
+
+Buat MainAbstraction.java untuk mendemonstrasikan pemakaian Pembayaran (polimorfik).
+Tampilkan hasil proses dan struk. Di akhir, panggil CreditBy.print("[NIM]", "[Nama]").
+Commit dan Push
+
+Commit dengan pesan: week5-abstraction-interface.
 
 ---
 
@@ -63,11 +85,30 @@ Contoh: *Dengan menggunakan class dan object, program menjadi lebih terstruktur 
 ---
 
 ## Quiz
-(1. [Tuliskan kembali pertanyaan 1 dari panduan]  
-   **Jawaban:** …  
+(1.Jelaskan perbedaan konsep dan penggunaan abstract class dan interface.
+   **Jawaban:** …  Abstract class adalah class yang:
 
-2. [Tuliskan kembali pertanyaan 2 dari panduan]  
-   **Jawaban:** …  
+Tidak bisa diinstansiasi
 
-3. [Tuliskan kembali pertanyaan 3 dari panduan]  
+Digunakan sebagai kelas dasar (base class)
+
+Bisa punya method abstrak dan non-abstrak
+
+Cocok untuk relasi “is-a” yang kuat
+
+Interface adalah:
+
+Kontrak perilaku
+
+Berisi method yang harus diimplementasikan
+
+Fokus ke apa yang bisa dilakukan, bukan bagaimana
+
+2.Mengapa multiple inheritance lebih aman dilakukan dengan interface pada Java? 
+   **Jawaban:** …  
+Multiple inheritance lebih aman menggunakan interface di Java karena menghindari konflik implementasi dan ambiguitas, sekaligus menjaga desain tetap sederhana dan terkontrol
+3.Pada contoh Agri-POS, bagian mana yang paling tepat menjadi abstract class dan mana yang menjadi interface? Jelaskan alasannya.
    **Jawaban:** …  )
+   Abstract class → entitas inti yang punya data & perilaku dasar
+
+Interface → fitur / kemampuan / kontrak yang bisa dipakai banyak entitas
